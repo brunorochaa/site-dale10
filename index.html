@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Andrés Nicólas D'Alessandro">
+    <meta name="keywords" content="D'ALE, DALE10, D'Alessandro, LaBoba, Andrés D'alessandro">
+    <meta name="author" content="Bruno Rocha, Thiago Dias - brunorochaamaral@gmail.com, thiago_dasd@gmail.com">
+    <title>SITE - D'ALESSANDRO</title>
+    <link rel="shortcut icon" href="img/icon-dale.png">
+    <link rel="stylesheet" type="text/css" href="css/bootsfake.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:
+                $(this.hash).offset().top}, 900);
+            });
+        });
+    </script>
+    <style type="text/css">
+		#erro {
+			color: red;
+			font-weight: bold;
+		}
+		input{
+			border-radius:3px;
+			padding:4px;
+			margin:5px;
+		}
+		.container{			
+			margin:30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function verifica() {
+			var form = document.getElementById('form');
+			var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var campotxt = document.getElementById('campotxt').value;
+			var erro = document.getElementById('erro');
+			var msg_erro;
+
+			if(nome.length<2)
+				msg_erro = "Campo NOME incorreto";
+            else if(email.length<2)
+				msg_erro = "Campo EMAIL incorreto";
+            else if(campotxt.length<2)
+				msg_erro = "Campo TEXTO incorreto";
+			else
+				msg_erro = '';
+
+			if(msg_erro == '')
+				form.submit();
+			else
+				erro.innerHTML = msg_erro;
+		}
+	</script>
+</head>
+<body>
+    <div class="geral" id="topo">
+        <header class="logo">
+            <figure>
+                <a href="index.html"><img src="img/logo-dale.png" alt="Logo dale"></a>
+            </figure>
+        </header>
+        <nav class="idiomas-mobile">
+            <ul>
+                <li><a href="index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
+                <li><a href="en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
+                <li><a href="es/index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="scroll">Home</a></li>
+                <li><a href="#perfil" class="scroll">Perfil</a></li>
+                <li><a href="#multimidia" class="scroll">Multimídia</a></li>
+                <li><a href="#redes-sociais" class="scroll">Redes Sociais</a></li>
+            </ul>
+        </nav>
+        <nav class="idiomas">
+            <ul>
+                <li><a href="index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
+                <li><a href="en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
+                <li><a href="es/index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
+            </ul>
+        </nav>
+        <div class="home" id="home">
+            <h1>10</h1>
+            <figure>
+                <a href="#perfil" class="scroll"><img src="img/scroll-down.gif" alt="Rolar para baixo botão"></a>
+            </figure>
+        </div>
+        <section class="perfil" id="perfil">
+            <h2>Aham</h2>
+            <div class="conteudo-perfil">
+                <p>Se a trajetória de <strong>D'Ale</strong> não é propriamente um tango, cheio de dramas e lágrimas, como é comum entre os jogadores de futebol, também não pode ser resumida nas mariposas de Fito Paez. Seus pais, Gladys e Eduardo, desde cedo batalharam para realizar o sonho do filho. "Eles sempre contam que eu só queria saber da bola. Jogava na rua, em casa, em qualquer lugar... Eles trabalhavam, mas faziam um esforço muito grande para me proporcionar a oportunidade de jogar futebol", recorda ele. Conheça um pouco mais da carreira de <strong>D'Alessandro</strong>, dos seus primeiros toques na bola às glórias conquistadas nos campos do mundo inteiro.</p>
+                <div class="logos-maiores">
+                    <figure>
+                        <img src="img/inter.png" alt="Logo S.C.Internacional Campeão de Tudo">
+                    </figure>
+                </div>
+                <div class="logos-maiores">
+                    <figure>
+                        <img src="img/arg.png" alt="Logo Argentina">
+                    </figure>
+                </div>
+                <div class="logos-maiores">
+                    <figure>
+                        <img src="img/river.png" alt="Logo River Plate">
+                    </figure>
+                </div>
+                <figure>
+                    <img src="img/times.png" alt="Outros times" class="logo-menor">
+                </figure>
+                <a href="perfil.html" class="btn btn-link btn-lg centralizado">Veja a trajetória do craque</a>
+            </div>
+        </section>
+        <div class="multimidia" id="multimidia">
+            <div class="caixas-multimidia">
+                <figure>
+                    <img src="img/icon-trofeu.png" alt="Taça">
+                </figure>
+                <h1>17 Títulos <strong>CONQUISTADOS</strong></h1>
+            </div>
+            <div class="caixas-multimidia">
+                <figure>
+                    <img src="img/icon-gols.png" alt="Desenho goleira com bola na rede">
+                </figure>
+                <h1>Mais de 100 <strong>GOLS</strong></h1>
+            </div>
+            <div class="caixas-multimidia">
+                <figure>
+                    <img src="img/icon-medalha.png" alt="Medalha fazendo alusão ao número #1 da américa">
+                </figure>
+                <h1>Rei da <strong>AMÉRICA/2010</strong></h1>
+            </div>
+            <div class="botao-multimidia">
+                <a href="https://www.youtube.com/channel/UCUjEpzGk7PT7Y28AhhaKPDQ" class="btn btn-link btn-lg centralizado">Vídeos do Youtube</a>
+            </div>
+            <div class="multimidia-yt">
+                <iframe src="https://www.youtube.com/embed/Uy3rjwHvfuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="multimidia-video"></iframe>
+            </div>
+        </div>
+        <div class="redes-sociais" id="redes-sociais">
+            <h1>Siga o craque nas redes sociais</h1>
+            <div class="caixas">
+                <div class="topo-caixas">
+                    <figure>
+                        <img src="img/icon-insta.png" alt="Icon instagram">
+                    </figure>
+                    <h3>/DALE10</h3>
+                </div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdalessandro10oficial%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="caixas">
+                <div class="topo-caixas">
+                    <figure>
+                        <img src="img/icon-twitter.png" alt="Icon twitter">
+                    </figure>
+                     <h3>/DALE10</h3>
+                </div>
+                <a class="twitter-timeline" href="https://twitter.com/dale10?ref_src=twsrc%5Etfw" width="340" height="500" style="border:none;overflow:hidden">Tweets by dale10</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="caixas">
+                <div class="topo-caixas">
+                    <figure>
+                        <img src="img/icon-face.png" alt="Icon facebook">
+                    </figure>
+                    <h3>/DALESSANDRO10OFICIAL</h3>
+                </div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdalessandro10oficial%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <section class="contato" id="contato">
+            <h2>Contato</h2>
+            <div class="contato-esquerdo">
+                <form method="post"  id="form">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" id="nome" class="form-control" pattern="[a-zA-ZãÃáÁàÀêÊéÉèÈíÍìÌôÔõÕóÓòÒúÚùÙûÛçÇ ]{2,100}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea name="mensagem" id="campotxt" cols="30" rows="6" class="form-control" required></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="btn btn-danger" onclick="verifica()">
+                    <input type="reset" value="Limpar" class="btn btn-dark">
+                    <div id="erro"></div>
+                </form>
+            </div>
+            <div class="contato-direito">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.9105538361123!2d-51.15492908520224!3d-30.010724636668805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977095b735899%3A0x27cd6ee10f7aed04!2sQI%20Faculdade%20%26%20Escola%20T%C3%A9cnica%20%7C%20Assis%20Brasil%20%7C%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1583152312235!5m2!1spt-BR!2sbr" width="110%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </section>
+        <div class="botao-topo">
+            <a href="#topo" class="botao-topo scroll"><img src="img/arrow.png" alt="Seta para cima"></a>
+        </div>
+        <div class="rodape">
+            <footer class="rodape-esquerdo" id="rodape-esquerdo">
+                <div class="elementos-rodape">
+                    <p>&copy; 2020 - BRUAGO</p>
+                    <address>contato@dalessandro10.com</address>
+                </div>
+            </footer>
+            <footer class="rodape-direito" id="rodape-direito">
+                <figure>
+                    <a href="https://www.adidas.com.br/" target="_blank"><img src="img/icon-adidas.png" alt="Logo Adidas"></a>
+                </figure>
+                <figure>
+                    <a href="https://www.pop3planning.com/" target="_blank"><img src="img/icon-pop3.png" alt="Pop3 Planning"></a>
+                </figure>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
