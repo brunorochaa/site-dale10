@@ -1,61 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Andrés Nicólas D'Alessandro">
-    <meta name="keywords" content="D'ALE, DALE10, D'Alessandro, LaBoba, Andrés D'alessandro">
-    <meta name="author" content="Bruno Rocha, Thiago Dias - brunorochaamaral@gmail.com, thiago_dasd@gmail.com">
-    <title>SITE - D'ALESSANDRO</title>
-    <link rel="shortcut icon" href="img/icon-dale.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:
-                $(this.hash).offset().top}, 900);
-            });
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sitio de fans de Andrés Nicolás D'Alessandro (proyecto de estudio).">
+    <meta name="author" content="Bruno Rocha e Thiago Dias">
+    <meta name="theme-color" content="#6e0b16">
+    <title>Perfil | DALE10</title>
+    <link rel="icon" href="../img/icon-dale.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script src="../js/site.js" defer></script>
 </head>
 <body>
-    <div class="geral" id="topo">
-        <header class="logo">
-            <figure>
-                <a href="index.html"><img src="img/logo-dale.png" alt="Logo dale"></a>
-            </figure>
-        </header>
-        <nav class="idiomas-mobile">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="../en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
-            </ul>
-        </nav>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+<header class="topo">
+    <div class="topo-conteudo">
+        <a class="marca" href="index.html"><img src="../img/logo-dale.png" alt="D'Ale 10" width="150" height="50"></a>
+        <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span></span>
+        </button>
+        <nav class="menu" id="menu-principal">
+            <ul class="menu-links">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#perfil">Perfil</a></li>
-                <li><a href="index.html#multimidia">Multimedia</a></li>
-                <li><a href="index.html#redes-sociais">Redes Sociales</a></li>
+                <li><a href="index.html#numeros">Números</a></li>
+                <li><a href="index.html#redes">Redes sociales</a></li>
+                <li><a href="index.html#contato">Contacto</a></li>
+            </ul>
+            <ul class="idiomas" aria-label="Idioma">
+                <li><a href="../perfil.html" lang="pt-BR" hreflang="pt-BR"><img src="../img/icon-brazil.png" alt="Português" width="28" height="28"></a></li>
+                <li><a href="../en/perfil.html" lang="en" hreflang="en"><img src="../img/icon-usa.png" alt="English" width="28" height="28"></a></li>
+                <li><a href="../es/perfil.html" lang="es" hreflang="es" aria-current="page"><img src="../img/icon-spain.png" alt="Español" width="28" height="28"></a></li>
             </ul>
         </nav>
-        <nav class="idiomas">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="../en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
-            </ul>
-        </nav>
-        
-        <header class="cabecalho">
+    </div>
+</header>
 
-        </header>
-        <section class="conteudo">
-            <h1>Andrés Nicolas D'alessandro</h1>
+<main>
+    <section class="hero hero-perfil" id="inicio">
+        <div class="hero-conteudo">
+            <p class="hero-apelido">El Cabezón</p>
+            <h1>Andrés Nicolás D'Alessandro</h1>
+        </div>
+    </section>
+
+    <article class="secao">
+        <div class="container texto-longo">
             <p>Si preguntan a Andrés Nicolás D'alessandro acerca de su pasión por el fútbol y donde hizo el interés en ser un jugador profesional, él responderá: "Creo que nací con la cabeza en fútbol". Fue así, con la certeza de su elección y la obsesión por ganar, que "El Cabezón" siempre tomó su vida en el mundo del fútbol. A partir de los primeros pasos en bebé fútbol - especies de fútbol sala en Argentina - hasta el toque de clase con la camiseta 15 del equipo nacional de Argentina, D'Alessandro pasó por dificultades, malos momentos, pero nada, en absoluto, que se le dejase abatir o renunciar a su brillante y estrellado destino en el fútbol.</p>
             <p>Si la trayectoria de Dale no es exactamente un tango, lleno de drama y lágrimas, como es común entre jugadores de fútbol, también no puede resumirse en las mariposas de Fito Páez. Sus padres, Gladys y Eduardo, que lucharon temprano para realizar el sueño del hijo. "Siempre dicen que sólo quería ver la bola. Jugaba en la calle, en casa y en cualquier lugar... Ellos trabajaban, pero hacían un esfuerzo muy grande por darme la oportunidad de jugar al fútbol", él recuerda.</p>
             <p>"Creo que fue el momento más feliz de mi vida. No hay presión, no hay problema. No hay algunas cosas de la rutina de un jugador profesional. Cuando eres un niño, sólo diviertes, jugas con tus amigos todos los días. Fue divertido, pero no me le gustaba nunca perder, creo que el futbolista nace con eso. Una cosa que aprendí de mi padre era esto: luchar por lo que nos gusta! Nunca me vi obligado a hacer nada, lo hice porque me gustaba. Nunca se sabe si se llega a la profesional, pero mi pensamiento siempre ha sido jugar al fútbol. Vía en la televisión los juegos en Europa y pensaba que no existía, porque era demasiado lejos. El sueño era ser nombrado para el profesional, pero nunca se sabe cuándo va a ocurrir".</p>
@@ -72,26 +64,23 @@
             <p>"Han sido 340 partidos en qué vestí la camiseta colorada com mucho orgullo. Estrené en un Gre-Nal, fui muy feliz en los clásicos que jugué, gané todos los campeonatos posibles, dominamos el Campeonato Gaúcho, aún fue artillero. Los momentos experimentados en la Libertadores de 2010 serán para siempre memorables. En el Inter, fue elegido el mejor jugador de las Américas y volví a jugar para el equipo nacional. Mi historia en el Inter rompió la barrera de cuatro líneas. Estaba todo el tiempo aquí no sólo por la identificación que creció con el club. Fue mucho más que eso! En Porto Alegre, planté raíces. Mi familia fue tratada muy bien aquí. Nosotros, los argentinos, con la rivalidad que se dice entre los dos países, vivimos maravillosos años aquí. Yo puedo decir que soy Gaucho! Soy de Porto Alegre (gané el título de ciudadano de la ciudad). Mi hijo, Gonzalo, nació aquí. Es brasileño, Gaucho y, por supuesto, Colorado".</p>
             <p>En febrero de 2016, D'Ale una vez más vestiría la camisa del River. Después de 13 años, fue contratado a préstamo para jugar el Campeonato Argentino y la Copa Libertadores. Y, por supuesto, ser campeón. El 25 de agosto, con D´Alessandro, River ganó el título de la Recopa Sudamericana.</p>
             <p>"Esas son cosas que no esperamos ni imaginamos. Sensación de alivio y gran alegría que viví. Un título que también deseaba mucho, un momento especial con mi esposa, hijos, padres, hermano y amigos que han estado conmigo y saben cuánto quería que acabase así. Gracias a todos los que estaban siempre junto a mí, al grupo que hizo tanto esfuerzo para alcanzar este título, al River por dejarme vivir esta carrera ahora mismo y disfrutar de las cosas buenas que pasan rápido.</p>
-        </section>
-        <div class="botao-topo">
-            <a href="#topo" class="botao-topo scroll"><img src="img/arrow.png" alt="Seta para cima"></a>
         </div>
-        <div class="rodape">
-            <footer class="rodape-esquerdo" id="rodape-esquerdo">
-                <div class="elementos-rodape">
-                    <p>&copy; 2020 - BRUAGO</p>
-                    <address>contato@dalessandro10.com</address>
-                </div>
-            </footer>
-            <footer class="rodape-direito" id="rodape-direito">
-                <figure>
-                    <a href="https://www.adidas.com.br/" target="_blank"><img src="img/icon-adidas.png" alt="Logo Adidas"></a>
-                </figure>
-                <figure>
-                    <a href="https://www.pop3planning.com/" target="_blank"><img src="img/icon-pop3.png" alt="Pop3 Planning"></a>
-                </figure>
-            </footer>
+    </article>
+</main>
+
+<footer class="rodape">
+    <div class="container rodape-conteudo">
+        <div>
+            <p>&copy; 2020 Bruago &middot; Bruno Rocha e Thiago Dias</p>
+            <p class="rodape-aviso">Proyecto de estudio, sin vínculo oficial con el atleta.</p>
+        </div>
+        <div class="patrocinadores" aria-label="Patrocinadores">
+            <a href="https://www.adidas.com.br/" target="_blank" rel="noopener"><img src="../img/icon-adidas.png" alt="Adidas" width="40" height="40"></a>
+            <a href="https://www.pop3planning.com/" target="_blank" rel="noopener"><img src="../img/icon-pop3.png" alt="Pop3 Planning" width="40" height="40"></a>
         </div>
     </div>
+</footer>
+
+<a class="voltar-topo" href="#" aria-label="Volver arriba"><img src="../img/arrow.png" alt="" width="20" height="20"></a>
 </body>
 </html>

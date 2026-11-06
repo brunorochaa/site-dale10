@@ -1,185 +1,162 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Andrés Nicólas D'Alessandro">
-    <meta name="keywords" content="D'ALE, DALE10, D'Alessandro, LaBoba, Andrés D'alessandro">
-    <meta name="author" content="Bruno Rocha, Thiago Dias - brunorochaamaral@gmail.com, thiago_dasd@gmail.com">
-    <title>SITE - D'ALESSANDRO</title>
-    <link rel="shortcut icon" href="img/icon-dale.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootsfake.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:
-                $(this.hash).offset().top}, 900);
-            });
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sitio de fans de Andrés Nicolás D'Alessandro (proyecto de estudio).">
+    <meta name="author" content="Bruno Rocha e Thiago Dias">
+    <meta name="theme-color" content="#6e0b16">
+    <title>DALE10 | D'Alessandro</title>
+    <link rel="icon" href="../img/icon-dale.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script src="../js/site.js" defer></script>
 </head>
 <body>
-    <div class="geral" id="topo">
-        <header class="logo">
-            <figure>
-                <a href="index.html"><img src="img/logo-dale.png" alt="Logo dale"></a>
-            </figure>
-        </header>
-        <nav class="idiomas-mobile">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="../en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
+<header class="topo">
+    <div class="topo-conteudo">
+        <a class="marca" href="index.html"><img src="../img/logo-dale.png" alt="D'Ale 10" width="150" height="50"></a>
+        <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span></span>
+        </button>
+        <nav class="menu" id="menu-principal">
+            <ul class="menu-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#numeros">Números</a></li>
+                <li><a href="#redes">Redes sociales</a></li>
+                <li><a href="#contato">Contacto</a></li>
+            </ul>
+            <ul class="idiomas" aria-label="Idioma">
+                <li><a href="../index.html" lang="pt-BR" hreflang="pt-BR"><img src="../img/icon-brazil.png" alt="Português" width="28" height="28"></a></li>
+                <li><a href="../en/index.html" lang="en" hreflang="en"><img src="../img/icon-usa.png" alt="English" width="28" height="28"></a></li>
+                <li><a href="../es/index.html" lang="es" hreflang="es" aria-current="page"><img src="../img/icon-spain.png" alt="Español" width="28" height="28"></a></li>
             </ul>
         </nav>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html" class="scroll">Home</a></li>
-                <li><a href="#perfil" class="scroll">Perfil</a></li>
-                <li><a href="#multimidia" class="scroll">Multimedia</a></li>
-                <li><a href="#redes-sociais" class="scroll">Redes Sociales</a></li>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-conteudo">
+            <p class="hero-numero" aria-hidden="true">10</p>
+            <h1>Andrés Nicolás D'Alessandro</h1>
+            <p class="hero-subtitulo">Mediocampista argentino, número 10 e ídolo del Internacional</p>
+            <div class="hero-acoes">
+                <a class="botao" href="perfil.html">Ver la historia de la estrella de fútbol</a>
+                <a class="botao botao-vidro" href="#redes">Redes sociales</a>
+            </div>
+        </div>
+        <a class="hero-rolar" href="#perfil" aria-label="Ir al perfil"><span></span></a>
+    </section>
+
+    <section class="secao secao-perfil" id="perfil">
+        <div class="container perfil-grade">
+            <div>
+                <p class="rotulo">01</p>
+                <h2 class="titulo-secao">Perfil</h2>
+                <p class="texto-destaque">Si la trayectoria de <strong>D'Ale</strong> no es exactamente un tango, lleno de drama y lágrimas, como es común entre jugadores de fútbol, también no puede resumirse en las mariposas de Fito Páez. Sus padres, Gladys y Eduardo, lucharon temprano para realizar el sueño del hijo. "Siempre dicen que sólo quería ver la bola; jugaba en la calle, en casa y en cualquier lugar... Trabajaban, pero hacían un esfuerzo muy grande por darme la oportunidad de jugar al fútbol", recuerda. Conozca más de <strong>D'Alessandro</strong>, de su primer toque en la pelota a las glorias conquistadas en los campos alrededor del mundo.</p>
+                <a class="botao" href="perfil.html">Ver la historia de la estrella de fútbol</a>
+            </div>
+            <div class="clubes" aria-label="Clubes de la carrera">
+                <ul class="clubes-principais">
+                    <li><img src="../img/inter.png" alt="Sport Club Internacional" width="118" height="118"></li>
+                    <li><img src="../img/arg.png" alt="Seleção Argentina (AFA)" width="106" height="141"></li>
+                    <li><img src="../img/river.png" alt="River Plate" width="115" height="141"></li>
+                </ul>
+                <img class="clubes-outros" src="../img/times.png" alt="Portsmouth, Wolfsburg, Zaragoza e San Lorenzo" width="737" height="150">
+            </div>
+        </div>
+    </section>
+
+    <section class="secao secao-numeros" id="numeros">
+        <div class="container">
+            <p class="rotulo">02</p>
+            <h2 class="titulo-secao">Números de la carrera</h2>
+            <ul class="numeros">
+                <li class="cartao-numero">
+                    <img src="../img/icon-trofeu.png" alt="" width="72" height="66">
+                    <p>17 Títulos <strong>GANADOS</strong></p>
+                </li>
+                <li class="cartao-numero">
+                    <img src="../img/icon-gols.png" alt="" width="72" height="66">
+                    <p>Más de 100 <strong>GOLES</strong></p>
+                </li>
+                <li class="cartao-numero">
+                    <img src="../img/icon-medalha.png" alt="" width="72" height="66">
+                    <p>Rey de <strong>AMÉRICA/2010</strong></p>
+                </li>
             </ul>
-        </nav>
-        <nav class="idiomas">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="../en/index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
-            </ul>
-        </nav>
-        <div class="home" id="home">
-            <h1>10</h1>
-            <figure>
-                <a href="#perfil" class="scroll"><img src="img/scroll-down.gif" alt="Rolar para baixo botão"></a>
-            </figure>
+            <a class="botao" href="https://www.youtube.com/channel/UCUjEpzGk7PT7Y28AhhaKPDQ" target="_blank" rel="noopener">Vídeos de YouTube</a>
         </div>
-        <section class="perfil" id="perfil">
-            <h2>Aham</h2>
-            <div class="conteudo-perfil">
-                <p>Si la trayectoria de <strong>D'Ale</strong> no es exactamente un tango, lleno de drama y lágrimas, como es común entre jugadores de fútbol, también no puede resumirse en las mariposas de Fito Páez. Sus padres, Gladys y Eduardo, lucharon temprano para realizar el sueño del hijo. "Siempre dicen que sólo quería ver la bola; jugaba en la calle, en casa y en cualquier lugar... Trabajaban, pero hacían un esfuerzo muy grande por darme la oportunidad de jugar al fútbol", recuerda. Conozca más de <strong>D'Alessandro</strong>, de su primer toque en la pelota a las glorias conquistadas en los campos alrededor del mundo.</p>
-                <div class="logos-maiores">
-                    <figure>
-                        <img src="img/inter.png" alt="Logo S.C.Internacional Campeão de Tudo">
-                    </figure>
-                </div>
-                <div class="logos-maiores">
-                    <figure>
-                        <img src="img/arg.png" alt="Logo Argentina">
-                    </figure>
-                </div>
-                <div class="logos-maiores">
-                    <figure>
-                        <img src="img/river.png" alt="Logo River Plate">
-                    </figure>
-                </div>
-                <figure>
-                    <img src="img/times.png" alt="Outros times" class="logo-menor">
-                </figure>
-                <a href="perfil.html" class="btn btn-link btn-lg centralizado">Ver la historia de la estrella de fútbol</a>
-            </div>
-        </section>
-        <div class="multimidia" id="multimidia">
-            <div class="caixas-multimidia">
-                <figure>
-                    <img src="img/icon-trofeu.png" alt="Taça">
-                </figure>
-                <h1>17 Títulos <strong>GANADOS</strong></h1>
-            </div>
-            <div class="caixas-multimidia">
-                <figure>
-                    <img src="img/icon-gols.png" alt="Desenho goleira com bola na rede">
-                </figure>
-                <h1>Más de 100 <strong>GOLES</strong></h1>
-            </div>
-            <div class="caixas-multimidia">
-                <figure>
-                    <img src="img/icon-medalha.png" alt="Medalha fazendo alusão ao número #1 da américa">
-                </figure>
-                <h1>Rey de <strong>AMÉRICA/2010</strong></h1>
-            </div>
-            <div class="botao-multimidia">
-                <a href="https://www.youtube.com/channel/UCUjEpzGk7PT7Y28AhhaKPDQ" class="btn btn-link btn-lg">Vídeos do Youtube</a>
-            </div>
-            <div class="multimidia-yt">
-                <iframe src="https://www.youtube.com/embed/Uy3rjwHvfuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="multimidia-video"></iframe>
+    </section>
+
+    <section class="secao secao-redes" id="redes">
+        <div class="container">
+            <p class="rotulo">03</p>
+            <h2 class="titulo-secao">Sigue la estrella en las redes sociales</h2>
+            <div class="redes">
+                <a class="cartao-rede" href="https://www.instagram.com/dale10/" target="_blank" rel="noopener">
+                    <img src="../img/icon-insta.png" alt="" width="56" height="56">
+                    <span class="rede-nome">Instagram</span>
+                    <span class="rede-usuario">@dale10</span>
+                    <span class="botao botao-contorno">Seguir</span>
+                </a>
+                <a class="cartao-rede" href="https://x.com/dale10" target="_blank" rel="noopener">
+                    <img src="../img/icon-twitter.png" alt="" width="56" height="56">
+                    <span class="rede-nome">X (Twitter)</span>
+                    <span class="rede-usuario">@dale10</span>
+                    <span class="botao botao-contorno">Seguir</span>
+                </a>
+                <a class="cartao-rede" href="https://www.facebook.com/dalessandro10oficial/" target="_blank" rel="noopener">
+                    <img src="../img/icon-face.png" alt="" width="56" height="56">
+                    <span class="rede-nome">Facebook</span>
+                    <span class="rede-usuario">/dalessandro10oficial</span>
+                    <span class="botao botao-contorno">Seguir</span>
+                </a>
             </div>
         </div>
-        <div class="redes-sociais" id="redes-sociais">
-            <h1>Sigue la estrella en las redes sociales</h1>
-            <div class="caixas">
-                <div class="topo-caixas">
-                    <figure>
-                        <img src="img/icon-insta.png" alt="Icon instagram">
-                    </figure>
-                    <h3>/DALE10</h3>
-                </div>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdalessandro10oficial%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
-            <div class="caixas">
-                <div class="topo-caixas">
-                    <figure>
-                        <img src="img/icon-twitter.png" alt="Icon twitter">
-                    </figure>
-                     <h3>/DALE10</h3>
-                </div>
-                <a class="twitter-timeline" href="https://twitter.com/dale10?ref_src=twsrc%5Etfw" width="340" height="500" style="border:none;overflow:hidden">Tweets by dale10</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="caixas">
-                <div class="topo-caixas">
-                    <figure>
-                        <img src="img/icon-face.png" alt="Icon facebook">
-                    </figure>
-                    <h3>/DALESSANDRO10OFICIAL</h3>
-                </div>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdalessandro10oficial%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
-        </div>
-        <section class="contato" id="contato">
-            <h2>Contacto</h2>
-            <div class="contato-esquerdo">
-                <form method="post" name="form" action="#">
-                    <div class="form-group">
-                        <label>Nombre:</label>
-                        <input type="text" name="nome" class="form-control" pattern="[a-zA-ZãÃáÁàÀêÊéÉèÈíÍìÌôÔõÕóÓòÒúÚùÙûÛçÇ ]{2,100}" required>
+    </section>
+
+    <section class="secao secao-contato" id="contato">
+        <div class="container contato-grade">
+            <div>
+                <p class="rotulo">04</p>
+                <h2 class="titulo-secao">Contacto</h2>
+                <form id="form-contato" class="formulario" novalidate>
+                    <label for="contato-nome">Nombre</label>
+                    <input type="text" id="contato-nome" name="nome" minlength="2" maxlength="100" autocomplete="name" required>
+                    <label for="contato-email">Correo electrónico</label>
+                    <input type="email" id="contato-email" name="email" maxlength="100" autocomplete="email" required>
+                    <label for="contato-mensagem">Mensaje</label>
+                    <textarea id="contato-mensagem" name="mensagem" rows="5" minlength="2" required></textarea>
+                    <div class="formulario-acoes">
+                        <button type="submit" class="botao">Enviar</button>
+                        <button type="reset" class="botao botao-secundario">Limpiar</button>
                     </div>
-                    <div class="form-group">
-                        <label>E-mail:</label>
-                        <input type="email" name="email" class="form-control" pattern="" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Mensaje</label>
-                        <textarea name="mensagem" cols="30" rows="6" class="form-control" required></textarea>
-                    </div>
-                    <input type="submit" value="Enviar" class="btn btn-danger">
-                    <input type="reset" value="Limpiar" class="btn btn-dark">
+                    <p id="contato-aviso" class="aviso" role="status"></p>
                 </form>
             </div>
-            <div class="contato-direito">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.9105538361123!2d-51.15492908520224!3d-30.010724636668805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977095b735899%3A0x27cd6ee10f7aed04!2sQI%20Faculdade%20%26%20Escola%20T%C3%A9cnica%20%7C%20Assis%20Brasil%20%7C%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1583152312235!5m2!1spt-BR!2sbr" width="110%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-        </section>
-        <div class="botao-topo">
-            <a href="#topo" class="botao-topo scroll"><img src="img/arrow.png" alt="Seta para cima"></a>
+            <iframe class="mapa" title="Mapa de QI Escolas e Faculdades, Porto Alegre" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.9105538361123!2d-51.15492908520224!3d-30.010724636668805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977095b735899%3A0x27cd6ee10f7aed04!2sQI%20Faculdade%20%26%20Escola%20T%C3%A9cnica%20%7C%20Assis%20Brasil%20%7C%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1583152312235!5m2!1spt-BR!2sbr"></iframe>
         </div>
-        <div class="rodape">
-            <footer class="rodape-esquerdo" id="rodape-esquerdo">
-                <div class="elementos-rodape">
-                    <p>&copy; 2020 - BRUAGO</p>
-                    <address>contato@dalessandro10.com</address>
-                </div>
-            </footer>
-            <footer class="rodape-direito" id="rodape-direito">
-                <figure>
-                    <a href="https://www.adidas.com.br/" target="_blank"><img src="img/icon-adidas.png" alt="Logo Adidas"></a>
-                </figure>
-                <figure>
-                    <a href="https://www.pop3planning.com/" target="_blank"><img src="img/icon-pop3.png" alt="Pop3 Planning"></a>
-                </figure>
-            </footer>
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="container rodape-conteudo">
+        <div>
+            <p>&copy; 2020 Bruago &middot; Bruno Rocha e Thiago Dias</p>
+            <p class="rodape-aviso">Proyecto de estudio, sin vínculo oficial con el atleta.</p>
+        </div>
+        <div class="patrocinadores" aria-label="Patrocinadores">
+            <a href="https://www.adidas.com.br/" target="_blank" rel="noopener"><img src="../img/icon-adidas.png" alt="Adidas" width="40" height="40"></a>
+            <a href="https://www.pop3planning.com/" target="_blank" rel="noopener"><img src="../img/icon-pop3.png" alt="Pop3 Planning" width="40" height="40"></a>
         </div>
     </div>
+</footer>
+
+<a class="voltar-topo" href="#" aria-label="Volver arriba"><img src="../img/arrow.png" alt="" width="20" height="20"></a>
 </body>
 </html>

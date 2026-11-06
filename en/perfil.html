@@ -1,61 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Andrés Nicólas D'Alessandro">
-    <meta name="keywords" content="D'ALE, DALE10, D'Alessandro, LaBoba, Andrés D'alessandro">
-    <meta name="author" content="Bruno Rocha, Thiago Dias - brunorochaamaral@gmail.com, thiago_dasd@gmail.com">
-    <title>SITE - D'ALESSANDRO</title>
-    <link rel="shortcut icon" href="img/icon-dale.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:
-                $(this.hash).offset().top}, 900);
-            });
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fan site about Andrés Nicolás D'Alessandro (study project).">
+    <meta name="author" content="Bruno Rocha e Thiago Dias">
+    <meta name="theme-color" content="#6e0b16">
+    <title>Profile | DALE10</title>
+    <link rel="icon" href="../img/icon-dale.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script src="../js/site.js" defer></script>
 </head>
 <body>
-    <div class="geral" id="topo">
-        <header class="logo">
-            <figure>
-                <a href="index.html"><img src="img/logo-dale.png" alt="Logo dale"></a>
-            </figure>
-        </header>
-        <nav class="idiomas-mobile">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="../es/index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
-            </ul>
-        </nav>
-        <nav class="menu">
-            <ul>
+<header class="topo">
+    <div class="topo-conteudo">
+        <a class="marca" href="index.html"><img src="../img/logo-dale.png" alt="D'Ale 10" width="150" height="50"></a>
+        <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Open menu">
+            <span></span>
+        </button>
+        <nav class="menu" id="menu-principal">
+            <ul class="menu-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#perfil">Profile</a></li>
-                <li><a href="index.html#multimidia">Multimedia</a></li>
-                <li><a href="index.html#redes-sociais">Network</a></li>
+                <li><a href="index.html#numeros">Numbers</a></li>
+                <li><a href="index.html#redes">Social</a></li>
+                <li><a href="index.html#contato">Contact</a></li>
+            </ul>
+            <ul class="idiomas" aria-label="Language">
+                <li><a href="../perfil.html" lang="pt-BR" hreflang="pt-BR"><img src="../img/icon-brazil.png" alt="Português" width="28" height="28"></a></li>
+                <li><a href="../en/perfil.html" lang="en" hreflang="en" aria-current="page"><img src="../img/icon-usa.png" alt="English" width="28" height="28"></a></li>
+                <li><a href="../es/perfil.html" lang="es" hreflang="es"><img src="../img/icon-spain.png" alt="Español" width="28" height="28"></a></li>
             </ul>
         </nav>
-        <nav class="idiomas">
-            <ul>
-                <li><a href="../index.html"><img src="img/icon-brazil.png" alt="Bandeira do Brasil"></a></li>
-                <li><a href="index.html"><img src="img/icon-usa.png" alt="Bandeira do Estados Unidos"></a></li>
-                <li><a href="../es/index.html"><img src="img/icon-spain.png" alt="Bandeira da Espanha"></a></li>
-            </ul>
-        </nav>
-        
-        <header class="cabecalho">
+    </div>
+</header>
 
-        </header>
-        <section class="conteudo">
-            <h1>Andrés Nicolas D'alessandro</h1>
+<main>
+    <section class="hero hero-perfil" id="inicio">
+        <div class="hero-conteudo">
+            <p class="hero-apelido">El Cabezón</p>
+            <h1>Andrés Nicolás D'Alessandro</h1>
+        </div>
+    </section>
+
+    <article class="secao">
+        <div class="container texto-longo">
             <p>If question Andrés Nicolás D'alessandro about his passion for football and from where did the interest in being a professional player emerge, he will respond: "I think I was born with the football on my mind". That's how, with the certainty of his choice and the obsession with winning, that "El Cabezón" always took his life in the ball world. From the first steps in baby fútbol - species of indoor soccer in Argentina - to the touch of class with 15 Argentina National Team shirt, D'alessandro faced difficulties, but nothing at all that made him down or giving up his bright and stared destiny in football.</p>
             <p>If Ale´s trajectory is not exactly a tango, full of drama and tears, as is common among football players, also cannot be summed up in the moths of Fito Paez. His parents, Gladys and Eduardo, early struggled to fulfill the son´s dream. "They always tell that I just wanted to see the ball. I played on the street, at home, anywhere ... They worked, but they made a very big effort for giving me the opportunity to play football", he remembers.</p>
             <p>"I think it was the happiest time of my life. No pressure, no problem. There are not some things disturgin things of a professional player´s routine. When you're a kid, just has fun, plays with friends every day. I was amused, but never liked to lose, I think the football player is born with it. One thing I learned from my father was this: fight for what we like! I was never forced into anything, I did because I liked. You never know if you will be a professional, but my thinking has always been to play football. I saw on television the games in Europe and found that it did not exist, because it was too far away. The dream was to be named for the professional, but you never know when it's going to happen ".</p>
@@ -72,26 +64,23 @@
             <p>"There were 340 matches in that I dressed the colorada shirt with the world biggest pride. I stared in a Gre-Nal, I was very happy in the classics that played, we dominated thr Gaucho Championship, I even was a scorer. The moments experienced in the Libertadores 2010 will be forever memorable. At Inter, I was chosen the best player of the Americas and I began to play again for the team My story at Inter broke the barrier of the four lines. I was the whole time here not only by the identification that grew up with the club. It was much more than that! In Porto Alegre, I took roots in. My family was very well treated here. We, Argentinians, with any rivalry that is said between the two countries, we lived wonderful years here. I can say I'm Gaucho! I am from Porto Alegre (I even won the title of citizen). My son, Gonzalo, was born here! He is Brazilian, Gaucho and sure Colorado"</p>
             <p>In February 2016, D'Ale would wear the shirt of the River once again. After 13 years, I was hired to play the Argentine Championship and the Libertadores Cup. And, of course, to be a champion. On 25 August, with D´Alessandro on the field, the River won the South American Recopa title.</p>
             <p>"These are things that we didn't expect and have no idea. Feeling of relief and great joy that I lived. A title that I wish too, a special moment with my wife, children, parents, brother and friends who've been with me and I know how much I wanted everything came out like that. Thanks to all that were always beside me, to the group that made so much effort to achieve this title, to the River for letting me live this career moment and enjoy the good things, which quickly pass".</p>
-        </section>
-        <div class="botao-topo">
-            <a href="#topo" class="botao-topo scroll"><img src="img/arrow.png" alt="Seta para cima"></a>
         </div>
-        <div class="rodape">
-            <footer class="rodape-esquerdo" id="rodape-esquerdo">
-                <div class="elementos-rodape">
-                    <p>&copy; 2020 - BRUAGO</p>
-                    <address>contato@dalessandro10.com</address>
-                </div>
-            </footer>
-            <footer class="rodape-direito" id="rodape-direito">
-                <figure>
-                    <a href="https://www.adidas.com.br/" target="_blank"><img src="img/icon-adidas.png" alt="Logo Adidas"></a>
-                </figure>
-                <figure>
-                    <a href="https://www.pop3planning.com/" target="_blank"><img src="img/icon-pop3.png" alt="Pop3 Planning"></a>
-                </figure>
-            </footer>
+    </article>
+</main>
+
+<footer class="rodape">
+    <div class="container rodape-conteudo">
+        <div>
+            <p>&copy; 2020 Bruago &middot; Bruno Rocha e Thiago Dias</p>
+            <p class="rodape-aviso">Study project, not officially affiliated with the athlete.</p>
+        </div>
+        <div class="patrocinadores" aria-label="Sponsors">
+            <a href="https://www.adidas.com.br/" target="_blank" rel="noopener"><img src="../img/icon-adidas.png" alt="Adidas" width="40" height="40"></a>
+            <a href="https://www.pop3planning.com/" target="_blank" rel="noopener"><img src="../img/icon-pop3.png" alt="Pop3 Planning" width="40" height="40"></a>
         </div>
     </div>
+</footer>
+
+<a class="voltar-topo" href="#" aria-label="Back to top"><img src="../img/arrow.png" alt="" width="20" height="20"></a>
 </body>
 </html>

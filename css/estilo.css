@@ -1,0 +1,942 @@
+/*
+ * Site DALE10. Mobile first: as regras base valem para o celular e as
+ * media queries no fim do arquivo ajustam para telas maiores.
+ * Visual claro nas cores do Inter: fundo creme, vinho, vermelho e o
+ * dourado da estrela do logo. Topo, capa, números e rodapé ficam em
+ * vinho; perfil, redes e contato ficam claros.
+ * Cada seção da página inicial ocupa pelo menos a altura da tela.
+ */
+
+/* ---------- Variáveis ---------- */
+
+:root {
+    --vinho: #6e0b16;
+    --vinho-2: #98131f;
+    --vermelho-vivo: #ff4d57;
+    --vermelho: #c8102e;
+    --dourado: #d9ab3f;
+    --dourado-claro: #f0cf7a;
+    --papel: #f6f3ec;
+    --papel-2: #ece6d8;
+    --branco: #ffffff;
+    --texto: #2a1a1c;
+    --texto-suave: #6b5558;
+    --texto-claro: #fbeeee;
+    --texto-claro-suave: #ebc9cc;
+    --linha: rgba(110, 11, 22, 0.1);
+    --linha-clara: rgba(255, 255, 255, 0.14);
+    --fonte-menu: 'Oswald', 'Arial Narrow', sans-serif;
+    --fonte-titulo: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    --fonte-texto: 'Inter', system-ui, sans-serif;
+    --largura: 1600px;
+    --altura-topo: 72px;
+    --raio: 18px;
+    --sombra: 0 1px 2px rgba(110, 11, 22, 0.06), 0 12px 32px rgba(110, 11, 22, 0.08);
+    --sombra-forte: 0 2px 4px rgba(110, 11, 22, 0.06), 0 24px 48px rgba(110, 11, 22, 0.14);
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--altura-topo);
+}
+
+body {
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--texto);
+    background-color: var(--papel);
+}
+
+img,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    line-height: 1.02;
+    text-transform: uppercase;
+    color: var(--vinho);
+}
+
+strong {
+    color: var(--vinho);
+}
+
+:focus-visible {
+    outline: 3px solid var(--vermelho);
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(var(--largura), 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+/* Cada seção ocupa no mínimo a tela inteira (menos o topo) e centraliza o conteúdo na vertical. */
+.secao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100svh - var(--altura-topo));
+    padding-block: 5rem;
+    overflow: hidden;
+}
+
+/* Rótulo numerado acima do título: "01 ——". */
+.rotulo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font: 700 0.85rem var(--fonte-texto);
+    letter-spacing: 0.22em;
+    color: var(--vermelho);
+}
+
+.rotulo::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--vermelho-vivo), var(--dourado));
+}
+
+.titulo-secao {
+    margin-bottom: 2.5rem;
+    font-size: clamp(2.4rem, 8vw, 4.75rem);
+    letter-spacing: -0.005em;
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.8rem;
+    border: 2px solid var(--vinho);
+    border-radius: 999px;
+    font: 700 0.85rem var(--fonte-texto);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--vinho);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    border-color: var(--vermelho);
+    background-color: var(--vermelho);
+    box-shadow: 0 10px 24px rgba(200, 16, 46, 0.3);
+}
+
+/* Nas áreas escuras o botão principal fica dourado. */
+.hero .botao,
+.secao-numeros .botao {
+    border-color: var(--dourado);
+    color: var(--vinho);
+    background-color: var(--dourado);
+}
+
+.hero .botao:hover,
+.secao-numeros .botao:hover {
+    border-color: var(--dourado-claro);
+    background-color: var(--dourado-claro);
+    box-shadow: 0 10px 28px rgba(217, 171, 63, 0.35);
+}
+
+.hero .botao-vidro {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--branco);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.hero .botao-vidro:hover {
+    border-color: var(--branco);
+    color: var(--vinho);
+    background-color: var(--branco);
+    box-shadow: none;
+}
+
+.botao-secundario,
+.botao-contorno {
+    color: var(--vinho);
+    background-color: transparent;
+}
+
+.botao-secundario:hover {
+    border-color: var(--vinho);
+    color: var(--branco);
+    background-color: var(--vinho);
+    box-shadow: none;
+}
+
+/* ---------- Topo ---------- */
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--linha-clara);
+    background-color: rgba(110, 11, 22, 0.9);
+    backdrop-filter: blur(14px);
+}
+
+.topo-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--altura-topo);
+    width: min(var(--largura), 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+.marca img {
+    width: auto;
+    height: 52px;
+}
+
+/* Botão "hambúrguer": três traços que viram um X quando o menu está aberto. */
+.botao-menu {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--linha-clara);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+}
+
+.botao-menu span,
+.botao-menu span::before,
+.botao-menu span::after {
+    position: absolute;
+    left: 10px;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--branco);
+    transition: transform 0.25s, background-color 0.25s;
+}
+
+.botao-menu span {
+    top: 20px;
+}
+
+.botao-menu span::before,
+.botao-menu span::after {
+    content: '';
+    left: 0;
+}
+
+.botao-menu span::before {
+    top: -7px;
+}
+
+.botao-menu span::after {
+    top: 7px;
+}
+
+.botao-menu[aria-expanded="true"] span {
+    background-color: transparent;
+}
+
+.botao-menu[aria-expanded="true"] span::before {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.botao-menu[aria-expanded="true"] span::after {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu {
+    position: absolute;
+    top: var(--altura-topo);
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 0.5rem 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--linha-clara);
+    background-color: var(--vinho);
+}
+
+.menu.aberto {
+    display: block;
+}
+
+.menu-links a {
+    display: block;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--linha-clara);
+    font: 500 1.15rem var(--fonte-menu);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--texto-claro);
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    color: var(--dourado);
+}
+
+.idiomas {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.idiomas a {
+    display: block;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.idiomas a:hover,
+.idiomas a[aria-current="page"] {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.idiomas a[aria-current="page"] {
+    box-shadow: 0 0 0 2px var(--vinho), 0 0 0 4px var(--dourado);
+}
+
+/* ---------- Capa (hero) ---------- */
+
+.hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: calc(100svh - var(--altura-topo));
+    padding: 4rem 1.25rem 6rem;
+    text-align: center;
+    color: var(--texto-claro);
+    background:
+        linear-gradient(180deg, rgba(110, 11, 22, 0.35) 0%, rgba(110, 11, 22, 0.75) 60%, var(--vinho) 100%),
+        url(../img/background1.jpg) center 20% / cover no-repeat;
+    background-color: var(--vinho);
+}
+
+/* Faixa vermelho-branca-vermelho no pé da capa, como a camisa da Argentina. */
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--vermelho-vivo) 0 33.3%, var(--branco) 33.3% 66.6%, var(--vermelho-vivo) 66.6%);
+}
+
+.hero-numero {
+    font: 800 clamp(7rem, 34vw, 15rem) / 0.9 var(--fonte-titulo);
+    color: transparent;
+    -webkit-text-stroke: 2px var(--dourado);
+}
+
+.hero h1 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.4rem, 9vw, 5.5rem);
+    color: var(--branco);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-subtitulo {
+    margin-top: 0.75rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: var(--texto-claro-suave);
+}
+
+.hero-apelido {
+    margin-top: 0.75rem;
+    font: 700 1rem var(--fonte-texto);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dourado);
+}
+
+.hero-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+/* Indicador "role para baixo": um mouse com a rodinha animada. */
+.hero-rolar {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    transform: translateX(-50%);
+}
+
+.hero-rolar span {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 4px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: var(--branco);
+    transform: translateX(-50%);
+    animation: rolar 1.6s infinite;
+}
+
+@keyframes rolar {
+    0% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, 14px); }
+}
+
+.hero-perfil {
+    min-height: 60svh;
+    padding-bottom: 4rem;
+    background:
+        linear-gradient(180deg, rgba(110, 11, 22, 0.4), rgba(110, 11, 22, 0.85)),
+        url(../img/cabecalho.jpg) center / cover no-repeat;
+    background-color: var(--vinho);
+}
+
+/* ---------- Perfil ---------- */
+
+.secao-perfil {
+    background:
+        radial-gradient(circle at 90% 20%, rgba(229, 5, 19, 0.18), transparent 45%),
+        var(--papel);
+}
+
+.perfil-grade {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+.texto-destaque {
+    max-width: 62ch;
+    margin-bottom: 2.25rem;
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+}
+
+/* Cartão vinho: os escudos principais são brancos. */
+.clubes {
+    position: relative;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--raio);
+    background:
+        radial-gradient(circle at 80% 0%, rgba(229, 5, 19, 0.22), transparent 55%),
+        linear-gradient(160deg, var(--vinho-2), var(--vinho));
+    box-shadow: var(--sombra-forte);
+    overflow: hidden;
+}
+
+.clubes::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--vermelho-vivo) 0 33.3%, var(--branco) 33.3% 66.6%, var(--vermelho-vivo) 66.6%);
+}
+
+.clubes-principais {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--linha-clara);
+}
+
+.clubes-principais img {
+    width: auto;
+    height: clamp(64px, 18vw, 130px);
+    transition: transform 0.3s;
+}
+
+.clubes-principais img:hover {
+    transform: scale(1.08);
+}
+
+.clubes-outros {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin-inline: auto;
+}
+
+/* ---------- Números ---------- */
+
+.secao-numeros {
+    text-align: center;
+    color: var(--texto-claro);
+    background:
+        linear-gradient(180deg, rgba(110, 11, 22, 0.93), rgba(110, 11, 22, 0.86) 50%, rgba(110, 11, 22, 0.95)),
+        url(../img/background3.jpg) center / cover no-repeat;
+    background-color: var(--vinho);
+}
+
+.secao-numeros .titulo-secao {
+    color: var(--branco);
+}
+
+.secao-numeros .rotulo {
+    justify-content: center;
+    color: var(--vermelho-vivo);
+}
+
+.secao-numeros .rotulo::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(270deg, var(--vermelho-vivo), var(--dourado));
+}
+
+.numeros {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.cartao-numero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2.5rem 1.25rem;
+    border: 1px solid var(--linha-clara);
+    border-radius: var(--raio);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: transform 0.25s, border-color 0.25s, background-color 0.25s;
+}
+
+.cartao-numero:hover {
+    border-color: var(--dourado);
+    background-color: rgba(255, 255, 255, 0.09);
+    transform: translateY(-6px);
+}
+
+/* Ícone dentro de um círculo dourado. */
+.cartao-numero img {
+    width: 96px;
+    height: 96px;
+    padding: 18px;
+    border: 2px solid rgba(217, 171, 63, 0.6);
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.cartao-numero p {
+    font: 700 1.9rem / 1.1 var(--fonte-titulo);
+    text-transform: uppercase;
+    color: var(--texto-claro);
+}
+
+.cartao-numero strong {
+    display: block;
+    color: var(--dourado);
+}
+
+/* ---------- Redes sociais ---------- */
+
+.secao-redes {
+    background-color: var(--papel-2);
+}
+
+.redes {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.cartao-rede {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 2.5rem 1.25rem;
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+    text-decoration: none;
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+/* Faixa vermelho no alto do cartão, que aparece ao passar o mouse. */
+.cartao-rede::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vermelho-vivo), var(--dourado));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.cartao-rede:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-forte);
+}
+
+.cartao-rede:hover::before {
+    transform: scaleX(1);
+}
+
+/* Ícones originais são pretos: aqui ficam vinho dentro de um círculo claro. */
+.cartao-rede img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 0.75rem;
+    padding: 22px;
+    border-radius: 50%;
+    background-color: var(--papel);
+}
+
+.rede-nome {
+    font: 700 1.6rem var(--fonte-titulo);
+    text-transform: uppercase;
+    color: var(--vinho);
+}
+
+.rede-usuario {
+    margin-bottom: 1rem;
+    color: var(--texto-suave);
+}
+
+.cartao-rede:hover .botao-contorno {
+    color: var(--branco);
+    background-color: var(--vinho);
+}
+
+/* ---------- Contato ---------- */
+
+.secao-contato {
+    background-color: var(--papel);
+}
+
+.contato-grade {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--vinho);
+}
+
+.formulario input,
+.formulario textarea {
+    margin-bottom: 1.2rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(110, 11, 22, 0.18);
+    border-radius: 12px;
+    font: inherit;
+    color: var(--texto);
+    background-color: var(--branco);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 4px rgba(229, 5, 19, 0.3);
+}
+
+.formulario .invalido {
+    border-color: #c0392b;
+}
+
+.formulario-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.aviso {
+    min-height: 1.6em;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.aviso.erro {
+    color: #b42318;
+}
+
+.aviso.sucesso {
+    color: #1a7f4b;
+}
+
+.mapa {
+    width: 100%;
+    min-height: 340px;
+    height: 100%;
+    border: 0;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra-forte);
+}
+
+/* ---------- Página de perfil (texto longo) ---------- */
+
+.texto-longo {
+    max-width: 72ch;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #3a2a2c;
+}
+
+.texto-longo p + p {
+    margin-top: 1.5rem;
+}
+
+.texto-longo p:first-child::first-letter {
+    float: left;
+    margin: 0.08em 0.12em 0 0;
+    font: 800 4em / 0.8 var(--fonte-titulo);
+    color: var(--vermelho);
+}
+
+.secao:has(.texto-longo) {
+    display: block;
+    min-height: 0;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+    padding-block: 2rem;
+    color: var(--texto-claro-suave);
+    background-color: var(--vinho);
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.rodape-aviso {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.patrocinadores {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.patrocinadores img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.patrocinadores a:hover img {
+    opacity: 1;
+}
+
+.voltar-topo {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--dourado);
+    border-radius: 50%;
+    background-color: var(--vinho);
+    box-shadow: 0 10px 24px rgba(110, 11, 22, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.voltar-topo img {
+    filter: brightness(0) invert(1);
+}
+
+.voltar-topo:hover {
+    transform: translateY(-3px);
+}
+
+.voltar-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ---------- Tablet (a partir de 640px) ---------- */
+
+@media (min-width: 640px) {
+    .numeros,
+    .redes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rodape-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* ---------- Desktop (a partir de 960px) ---------- */
+
+@media (min-width: 960px) {
+    :root {
+        --altura-topo: 96px;
+    }
+
+    .container,
+    .topo-conteudo {
+        width: min(var(--largura), 100% - 6rem);
+    }
+
+    .marca img {
+        height: 72px;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+        border: 0;
+        background: none;
+    }
+
+    .menu-links {
+        display: flex;
+        gap: 1.75rem;
+    }
+
+    .menu-links a {
+        position: relative;
+        padding: 0.25rem 0;
+        border: 0;
+        font-size: 1rem;
+    }
+
+    .menu-links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--dourado);
+        transform: scaleX(0);
+        transition: transform 0.2s;
+    }
+
+    .menu-links a:hover {
+        color: var(--branco);
+    }
+
+    .menu-links a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .idiomas {
+        margin-top: 0;
+        gap: 0.75rem;
+    }
+
+    .perfil-grade {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 5rem;
+    }
+
+    .contato-grade {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        align-items: stretch;
+    }
+
+    .mapa {
+        min-height: 480px;
+    }
+
+    .texto-longo {
+        font-size: 1.15rem;
+    }
+}
+
+/* ---------- Menos movimento ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
