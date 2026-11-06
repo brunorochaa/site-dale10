@@ -10,10 +10,13 @@ Site sobre a carreira de Andrés Nicolás D'Alessandro, em português, inglês e
 - **Perfil** (`perfil.html`): a trajetória completa.
 - Versões em inglês (`en/`) e espanhol (`es/`); as bandeiras levam à mesma página no outro idioma.
 - Responsivo: no celular o menu vira um botão ☰ e as seções ficam em uma coluna.
+- Visual nas cores do Inter: vinho, vermelho, creme e o dourado da estrela do logo.
 
 ## Como abrir
 
 Abra o `index.html` no navegador. Não precisa de servidor nem de instalação.
+
+As fontes (Oswald, Barlow Condensed e Inter) vêm do Google Fonts, então é preciso internet para vê-las como no projeto. Sem conexão o site funciona normalmente, só com fontes padrão do navegador.
 
 ## Estrutura
 
