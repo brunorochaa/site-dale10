@@ -4,6 +4,10 @@ Site sobre a carreira de Andrés Nicolás D'Alessandro, em português, inglês e
 
 > Projeto de estudo, **sem ligação oficial** com o atleta. Textos, fotos e marcas pertencem aos respectivos donos.
 
+| Início | Perfil |
+| --- | --- |
+| ![Capa do site](docs/imagens/inicio.png) | ![Página de perfil com a trajetória](docs/imagens/perfil.png) |
+
 ## Páginas
 
 - **Início** (`index.html`): capa, perfil com os clubes, números da carreira, redes sociais e contato (o formulário é demonstrativo: valida os campos, mas não envia nada).
