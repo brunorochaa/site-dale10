@@ -26,6 +26,15 @@ HTML, CSS e JavaScript puros, sem bibliotecas nem build. Abre direto pelo `index
 - Imagens grandes em JPEG/WebP, não PNG.
 - Formatação: `.editorconfig` (4 espaços, LF, UTF-8).
 
+## README com prints
+
+- O `README.md` mostra o projeto com prints em `docs/imagens/` (PNG; 1280 de largura no computador, 500 no celular; poucos, só as telas principais), em tabelas lado a lado.
+- Só dados fictícios nas imagens: nada de nome, telefone, e-mail ou chave reais, e nada do serviço na tela.
+- Refaça os prints só quando a tela mudar de verdade: gere de novo e compare o tamanho do arquivo; se for idêntico, mantenha o antigo (evita inchar o repositório).
+- Como tirar: Chrome sem janela, `chrome.exe --headless=new --hide-scrollbars --window-size=1280,900 --virtual-time-budget=10000 --screenshot=<arquivo> <url>`, com um `--user-data-dir=<pasta temporária>` para cada print. Site estático abre por `file:///`; PHP sobe com `C:\Users\bruno\php\php.exe -S localhost:8000 -t public` (o PHP não está no PATH). O Chrome sem janela não passa de uns 500 de largura.
+- A rotina completa está na skill `/readme` do Claude Code.
+- Neste projeto: `index.html` e `perfil.html` por `file:///` (as versões `en/` e `es/` têm o mesmo visual).
+
 ## Notas para futuros agentes
 
 - Reorganizado em 2026-11-06: removidas as cópias de CSS/JS/25 imagens em `en/` e `es/`, jQuery 3.1.1, `npm.js` e o `bootsfake.css` (recorte do Bootstrap 4, depois incorporado ao `estilo.css`); fundos convertidos de PNG (~6 MB) para JPEG (~0,5 MB); corrigidos `lang="en"` na página em português, links das bandeiras, `css/button.css` inexistente no perfil, caixa do Instagram que mostrava o Facebook, "More than GOALS" sem o número e formulário que enviava POST para a página estática.
